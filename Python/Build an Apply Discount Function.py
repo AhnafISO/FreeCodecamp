@@ -1,4 +1,15 @@
+"""
+Apply Discount Function – Notes
 
+This function calculates the final price of an item after applying a percentage discount.
+
+The function takes two inputs: price and discount.
+It validates that both inputs are numbers (int or float).
+It ensures the price is greater than 0 and the discount is between 0 and 100.
+If any input is invalid, the function returns an appropriate error message.
+If inputs are valid, it calculates the discount amount and subtracts it from the original price.
+The function returns the final price instead of printing it, allowing the result to be reused or tested.
+"""
 
 
 def apply_discount(price,discount):
