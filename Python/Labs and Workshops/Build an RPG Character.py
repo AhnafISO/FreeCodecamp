@@ -1,3 +1,46 @@
+"""
+RPG Character Creator
+
+This project implements a simple character creation system for a role-playing game.
+The function `create_character` validates user input and generates a formatted
+character sheet based on the provided attributes.
+
+Features:
+- Validates the character name:
+  • Must be a string
+  • Cannot be empty
+  • Cannot exceed 10 characters
+  • Cannot contain spaces
+- Validates character stats (strength, intelligence, charisma):
+  • Must all be integers
+  • Each stat must be between 1 and 4
+  • The total of all stats must equal exactly 7
+
+Output:
+- Returns a formatted multi-line string representing the character:
+  • First line: character name
+  • Next lines: stats (STR, INT, CHA)
+  • Each stat is visualized using:
+        ● for filled points
+        ○ for remaining points (up to 10 total)
+
+Example:
+    create_character('ren', 4, 2, 1)
+
+    Output:
+    ren
+    STR ●●●●○○○○○○
+    INT ●●○○○○○○○○
+    CHA ●○○○○○○○○○
+
+This project demonstrates input validation, conditional logic, and string
+formatting in Python.
+
+
+Built as part of FreeCodeCamp Python practice
+"""
+
+
 
 full_dot = '●'
 empty_dot = '○'
@@ -32,4 +75,4 @@ def create_character(name, strength, intelligence, charisma):
 
     return f"{name}\nSTR {lstr.ljust(10,empty_dot)}\nINT {lint.ljust(10,empty_dot)}\nCHA {lchar.ljust(10,empty_dot)}" 
 
-create_character('ren', 4, 2, 1)
+print(create_character('ren', 4, 2, 1))
